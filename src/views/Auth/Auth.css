@@ -1,29 +1,29 @@
+/* Auth.css */
 
-form {
+.auth-container {
   max-width: 400px;
   margin: 30px auto;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background: #141111;
+  background: #121010;
 }
 
-form label {
+.auth-container label {
   display: block;
-  margin-bottom: 15px;
   font-weight: 500;
+  margin-bottom: 5px;
 }
 
-form input {
+.auth-container input {
   width: 100%;
   padding: 8px;
-  margin-top: 5px;
+  margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-form button {
-  margin-right: 10px;
+.auth-container button {
   padding: 8px 16px;
   background-color: #007bff;
   border: none;
@@ -33,26 +33,13 @@ form button {
   transition: background-color 0.2s;
 }
 
-form button:hover {
+.auth-container button:hover {
   background-color: #0056b3;
 }
 
-form button[type="button"] {
-  background-color: #6c757d;
-}
-
-form button[type="button"]:hover {
-  background-color: #5a6268;
-}
-
-p.success {
-  color: green;
-  font-weight: 500;
-  margin-top: 15px;
-}
-
-p.error {
-  color: red;
-  font-weight: 500;
-  margin-top: 15px;
+.auth-container pre {
+  background: #efefef;
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto;
 }

@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Signup.css";
+import { AppContext } from "../../context/AppContext";
 
 export default function Signup() {
   const [name, setName] = useState("");
@@ -9,7 +10,7 @@ export default function Signup() {
   const [repeatPassword, setRepeatPassword] = useState("");
   const [status, setStatus] = useState("");
   const [statusClass, setStatusClass] = useState("");
-
+  const {request} = useContext(AppContext);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -34,7 +35,7 @@ export default function Signup() {
     formData.append("user-repeat", repeatPassword);
 
     try {
-      const response = await fetch("https://pv311num6-b9hbdbfsc3gdbfer.canadacentral-01.azurewebsites.net/Cosmos/SignUp", {
+      const response = request("/Cosmos/SignUp", {
         method: "POST",
         body: formData
       });
